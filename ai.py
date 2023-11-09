@@ -1,5 +1,8 @@
 import openai
-
+from dotenv import load_dotenv
+load_dotenv()
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 def getAiRespose(context, mt=1000, t=1, f=0):
     """
     Generate a chat response using the OpenAI ChatCompletion API.
